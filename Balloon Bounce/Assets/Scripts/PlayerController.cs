@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour {
 
@@ -31,9 +30,6 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        
-        //rb.velocity = Vector3.zero;
-
         if (EventSystem.GameRunning())
         {
 
@@ -83,40 +79,6 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
-
-        //if (EventSystem.GameRunning())
-        //{
-        //    rb.AddForce(gc.GetWind(), ForceMode2D.Force);
-
-
-        //    if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        //    {
-        //        Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-        //        mousePoint.z = 0;
-        //        if (cc.bounds.Contains(mousePoint))
-        //        {
-        //            Vector3 dir = center.position - mousePoint;
-        //            dir.Normalize();
-        //            dir.z = 0;
-
-        //            rb.velocity = (dir * speed);
-        //        }
-        //    }
-        //}
-        //else
-        //{
-        //    if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        //    {
-        //        Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-        //        mousePoint.z = 0;
-        //        if (cc.bounds.Contains(mousePoint))
-        //        {
-        //            EventSystem.Start();
-        //            rb.simulated = true;
-        //        }
-        //    }
-        //}
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
